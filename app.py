@@ -75,5 +75,6 @@ def home():
 
     return render_template('index.html', prediction_data=json.dumps(prediction_data), score_risque=score_risque)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+print("\n📊 --- VÉRIFICATION DES STATISTIQUES RÉELLES ---")
+groupe_non = df[df['Traitement par chimiotherapie'] == 'NON']
+print(groupe_non[time_col].describe())
